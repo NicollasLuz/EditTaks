@@ -19,7 +19,7 @@ function Card ({titulo, afazer}){
                 id="check1-61"
                 />
                 <label htmlFor="check1-61" className={styles.label}>
-                <svg width={45} height={45} viewBox="0 0 95 95">
+                <svg width={55} height={55} viewBox="0 0 95 95">
                     <rect
                     x={30}
                     y={20}

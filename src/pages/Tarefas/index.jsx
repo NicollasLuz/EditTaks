@@ -1,15 +1,17 @@
 import Card from "../../components/Card"
+import Container from '../../components/Container' 
 
 
 
 function Tarefas(){
     return (
-
-        <Card
-            className="card1"
-            titulo={"Mario"}
-            afazer={"limpar"}
-        />
+        <Container>
+            <h1>Tarefas</h1>
+            <Card
+                titulo={"Mario"}
+                afazer={"limpar"}
+            />
+        </Container>
     
     );
 }

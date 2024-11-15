@@ -1,15 +1,14 @@
     .input__container {
-        max-width: 200px;
+        max-width: 200em;
         display: flex;
         flex-direction: column;
         gap: 10px;
         background: rgba(255, 255, 255, 0.3);
         padding: 60px;
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 15%;
+        padding-right: 15%;
         border-radius: 20px;
         position: absolute;
-        margin-left: 100%;
         margin-top: 12%;
     }
     
@@ -43,8 +42,6 @@
         outline: none;
         width: 100%;
         padding: 0.6em;
-        padding-left: 10%;
-        padding-right: 10%;
         border-radius: 20px;
         background: #fff;
         transition: background 300ms, color 300ms;
