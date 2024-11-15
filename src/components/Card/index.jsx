@@ -1,20 +1,17 @@
+import styles from './Card.module.css'
 
 
-
-
-function Card (){
+function Card ({titulo, afazer}){
     return (
         
-        <div className="card">
-            <div className="card-header">
-                <span>Messadine, Susah<br></br>Tunisia</span>
-                <span>March 13</span>
+        <div className={styles.card}>
+                <div className={styles.card_header}>
+                <h3 className={styles.title}>{titulo}</h3>
+                <p className={styles.description}>{afazer}</p>
             </div>
 
-            <span className="temp">23°</span>
-
-            <div className="temp-scale">
-                <span>Celcius</span>
+            <div className={styles.temp_scale}>
+                <button>excluir</button>
             </div>
         </div>
         
