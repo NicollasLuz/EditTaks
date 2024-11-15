@@ -14,7 +14,7 @@ function AdicionarTarefas() {
                 placeholder="Digite a descrição da tarefa" 
                 type="text"
             />
-            <button >Adicionar</button>
+            <button className={styles.button}>Adicionar</button>
         </div>
     );
 }
