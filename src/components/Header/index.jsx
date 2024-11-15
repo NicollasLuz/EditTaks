@@ -12,7 +12,7 @@ function Header() {
         <span>Gerenciador de Tarefas</span>
       </Link>
       <nav className={`${styles.menuSandwich} ${showMenu ? styles.show : ''}`} onClick={toggleMenu}>
-        <Link to="/AdicionarTarefas">Adicionar Tarefas</Link>
+        <Link to="/">Adicionar Tarefas</Link>
         <Link to="/tarefas">Tarefas</Link>
       </nav>
     </header>
