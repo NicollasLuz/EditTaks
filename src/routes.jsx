@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Sobre from './pages/Tarefas'
+import Tarefas from './pages/Tarefas'
+import PageBase from './pages/PaginaBase'
 
 function AppRoutes() {
     return (
@@ -8,7 +9,7 @@ function AppRoutes() {
             <Routes>
                 <Route path='/' element={ <PageBase /> }>
                     <Route index element={ <Home /> }></Route>
-                    <Route path="/sobre" element={ <Tarefas /> }></Route>
+                    <Route path="/tarefas" element={ <Tarefas /> }></Route>
 
                 </Route>
             </Routes>
