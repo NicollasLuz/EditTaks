@@ -1,6 +1,5 @@
 import styles from './Card.module.css'
 
-
 function Card ({titulo, afazer}){
     return (
         <div className={styles.card}>
@@ -11,7 +10,7 @@ function Card ({titulo, afazer}){
             <hr className={styles.line} />
             <p className={styles.description}>{afazer}</p>
             <button className={styles.button}>Excluir</button>
-            
+
             <div className={styles.checkboxWrapper}>
                 <input
                 defaultChecked
@@ -41,7 +40,7 @@ function Card ({titulo, afazer}){
                 </svg>
                 </label>
             </div>
-    </div>
+        </div>
     );
 }
 export default Card;
