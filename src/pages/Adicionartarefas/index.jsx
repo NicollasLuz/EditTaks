@@ -4,80 +4,82 @@ import Tarefas from '../Tarefas';
 
 
 function AdicionarTarefas() {
-  const [tarefa, setTarefa] = useState([]);
+  const [tarefas, setTarefas] = useState([]);
   const [titulo, setTitulo] = useState('');
   const [descricao, setDescricao] = useState('');
-  const [showTarefas, setShowTarefas] = React.useState(false);
+  const [showTarefas, setShowTarefas] = useState(false);
 
   const handleChange = (inputType, e) => {
-      if (inputType === 'titulo') {
-          setTitulo(e.target.value);
-      } else {
-          setDescricao(e.target.value);
-      }
+    if (inputType === 'titulo') {
+      setTitulo(e.target.value);
+    } else if (inputType === 'descricao') {
+      setDescricao(e.target.value);
+    }
   };
 
   const handleSubmit = (e) => {
-      e.preventDefault();
-      const newTarefa = {
-          id: Date.now(),
-          titulo,
-          descricao
-      };
-
-      setTarefa([...tarefa, newTarefa]);
-      setTitulo('');
-      setDescricao('');
+    e.preventDefault();
+    const novaTarefa = {
+      id: Date.now(),
+      titulo,
+      descricao,
+    };
+    setTarefas([...tarefas, novaTarefa]);
+    setTitulo('');
+    setDescricao('');
   };
 
-  const handleEdit = (updatedTarefa) => {
-      setTarefa(tarefa.map(tarefa => 
-          tarefa.id === updatedTarefa.id ? updatedTarefa : tarefa
-      ));
+  const handleEdit = (tarefaAtualizada) => {
+    setTarefas(
+      tarefas.map((tarefa) =>
+        tarefa.id === tarefaAtualizada.id ? tarefaAtualizada : tarefa
+      )
+    );
   };
 
   const handleDelete = (id) => {
-      setTarefa(tarefa.filter(tarefa => tarefa.id !== id));
+    const resultado = confirm("Quer mesmo excluir a tarefa?")
+    if(resultado) {
+      setTarefas(tarefas.filter((tarefa) => tarefa.id !== id));
+      alert("Tarefa excluida com sucesso!")
+    }  
   };
 
-  console.log(titulo , descricao)
   return (
-      <>
-          <div className={styles.input__container}>
-              <label className={styles.input__label}>Título</label>
-              <br />
-              <input 
-                  className={styles.input}  
-                  placeholder="Digite o título da tarefa" 
-                  type="text" 
-                  value={titulo}
-                  onChange={(e) => handleChange('titulo', e)} 
-                  required
-              />
-              <br />
-              <input
-                  className={styles.input} 
-                  placeholder="Digite a descrição da tarefa" 
-                  type="text"
-                  value={descricao}
-                  onChange={(e) => handleChange('descricao', e)} 
-                  required
-              />
-              <button 
-                  className={styles.button}
-                  type="submit"
-                  onClick={handleSubmit}
-              >Adicionar</button>
-          </div>
-          <div>
-              <button onClick={() => setShowTarefas(!showTarefas)}>
-                  {showTarefas ? "Hide Tarefas" : "Show Tarefas"}
-              </button>
-              {showTarefas && (
-                  <Tarefas tarefa={tarefa} />
-              )}
-          </div>
-      </>
+    <>
+      <div className={styles.input__container}>
+        <label className={styles.input__label}>Título</label>
+        <br />
+        <input
+          className={styles.input}
+          placeholder="Digite o título da tarefa"
+          type="text"
+          value={titulo}
+          onChange={(e) => handleChange('titulo', e)}
+          required
+        />
+        <br />
+        <input
+          className={styles.input}
+          placeholder="Digite a descrição da tarefa"
+          type="text"
+          value={descricao}
+          onChange={(e) => handleChange('descricao', e)}
+          required
+        />
+        <br />
+        <button className={styles.button} type="submit" onClick={handleSubmit}>
+          Adicionar
+        </button>
+      </div>
+      
+          <Tarefas
+            tarefas={tarefas}
+            onEdit={handleEdit}
+            onDelete={handleDelete}
+          />
+        
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
 import styles from './Card.module.css'
 
-function Card ({titulo, afazer}){
+function Card ({titulo, afazer, vapo}){
     return (
         <div className={styles.card}>
             <div className={styles.card__border} />
@@ -9,11 +9,11 @@ function Card ({titulo, afazer}){
             </div>
             <hr className={styles.line} />
             <p className={styles.description}>{afazer}</p>
-            <button className={styles.button}>Excluir</button>
+            <button className={styles.button} onChange={vapo}>Excluir</button>
 
             <div className={styles.checkboxWrapper}>
                 <input
-                defaultChecked
+                defaultValue={false}
                 type="checkbox"
                 className={styles.check}
                 id="check1-61"
