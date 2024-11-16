@@ -206,3 +206,7 @@
         stroke-dashoffset: 0;
         opacity: 1;
     }
+
+    .description {
+        color: #ffffffb9;
+    }

@@ -5,11 +5,11 @@
         gap: 10px;
         background: rgba(255, 255, 255, 0.3);
         padding: 60px;
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 10%;
+        padding-right: 10%;
         border-radius: 20px;
         position: absolute;
-        margin-top: 12%;
+        margin-top: 9%;
     }
     
     .input__container::before {
@@ -31,10 +31,11 @@
         display: block;
         margin-top: -10%;
         margin-left: 0.4em;
-        color: #000;
+        color: #ffffff;
         text-transform: uppercase;
         font-size: 2em;
         font-weight: bold;
+        text-align: center;
     }
     
     .input {
@@ -42,6 +43,8 @@
         outline: none;
         width: 100%;
         padding: 0.6em;
+        padding-left: 6em;
+        padding-right: 6em;
         border-radius: 20px;
         background: #fff;
         transition: background 300ms, color 300ms;
@@ -51,19 +54,21 @@
         background: rgb(0, 0, 0);
         color: #fff;
     }
+
     .button {
         cursor: pointer;
-    
+
         padding: 0.5rem;
         width: 65%;
-        margin-top: 20%;
-        margin-left: 10%;
+        margin-top: 3%;
+        margin-left: 17%;
         background-image: linear-gradient(
         0deg,
         rgba(94, 58, 238, 1) 0%,
         rgba(197, 107, 240, 1) 100%
         );
-    
+        
+        
         font-size: 0.75rem;
         color: var(--white);
     
