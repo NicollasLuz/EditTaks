@@ -16,10 +16,6 @@ function Tarefas({ tarefas, onEdit, onDelete }) {
         }
     };
 
-    if (!tarefas || !Array.isArray(tarefas)) {
-        return <h1 className={styles.nada}>Nenhuma tarefa disponível.</h1>;
-    }
-
     return (
     <>
         <Container>
@@ -35,12 +31,13 @@ function Tarefas({ tarefas, onEdit, onDelete }) {
                         descricao: e.target.descricao.value,
                     });
                     }}
-                >
-                    <input className={styles.input} name="titulo" defaultValue={task.titulo} />
-                    <br/>
-                    <input className={styles.input} name="descricao" defaultValue={task.descricao} />
-                    <br/>
-                    <button className={styles.button} type="submit">Salvar</button>
+                >  
+                <input className={styles.input} name="titulo" defaultValue={task.titulo} />
+                <br/>
+                <br/>
+                <input className={styles.input} name="descricao" defaultValue={task.descricao} />
+                <br/>
+                <button className={styles.ButtonEdit2} type="submit">Salvar</button>
                 </form>
                 ) : (
                     <div className={styles.card}>

@@ -32,6 +32,8 @@
     
         border-radius: 1rem;
         box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+        margin-left: 110%;
+        margin-top: 10%;
     }
     
     .card .card__border {
@@ -184,7 +186,26 @@
         box-shadow: inset 0 -2px 25px -4px var(--white);
     }
 
-
+    .ButtonEdit2 {
+        cursor: pointer;
+    
+        padding: 0.5rem;
+        width: 30%;
+        margin-top: 2%;
+        margin-left: 70%;
+        background-image: linear-gradient(
+        0deg,
+        rgba(94, 58, 238, 1) 0%,
+        rgba(197, 107, 240, 1) 100%
+        );
+    
+        font-size: 0.75rem;
+        color: var(--white);
+    
+        border: 0;
+        border-radius: 9999px;
+        box-shadow: inset 0 -2px 25px -4px var(--white);
+    }
 
     .checkboxWrapper input[type="checkbox"] {
         visibility: hidden;

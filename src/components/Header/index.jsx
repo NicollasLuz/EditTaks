@@ -8,13 +8,7 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <Link to="/">
-        <span>Gerenciador de Tarefas</span>
-      </Link>
-      <nav className={`${styles.menuSandwich} ${showMenu ? styles.show : ''}`} onClick={toggleMenu}>
-        <Link to="/">Adicionar Tarefas</Link>
-        <Link to="/tarefas">Tarefas</Link>
-      </nav>
+      
     </header>
   );
 }
