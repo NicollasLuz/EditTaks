@@ -1,15 +1,27 @@
+import React, { useState } from 'react';
 import Card from "../../components/Card"
 import Container from '../../components/Container' 
 
 
 
-function Tarefas(){
+function Tarefas({tarefa, onEdit, onDelete}){
+    const [editingId, setEditingId] = useState(null);
+
+    const handleEdit = (contact) => {
+        if (editingId === contact.id) {
+        // Save the edited contact
+        onEdit(contact);
+        setEditingId(null);
+        } else {
+        setEditingId(contact.id);
+        }
+    };
+
     return (
         <Container>
-            <h1>Tarefas</h1>
             <Card
-                titulo={"Mario"}
-                afazer={"limpar"}
+                titulo={"maro"}
+                afazer={"limparoooooooooooooooooooooooo"}
             />
         </Container>
     
