@@ -81,3 +81,10 @@
     .tarefas {
         display:none;
     }
+
+    @media (max-width: 768px) {
+        .input__container{
+            margin-left: 0%;
+        }
+        
+    }

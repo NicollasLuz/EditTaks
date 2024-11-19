@@ -7,7 +7,6 @@ function AdicionarTarefas() {
   const [tarefas, setTarefas] = useState([]);
   const [titulo, setTitulo] = useState('');
   const [descricao, setDescricao] = useState('');
-  const [showTarefas, setShowTarefas] = useState(false);
 
   const handleChange = (inputType, e) => {
     if (inputType === 'titulo') {
